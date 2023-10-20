@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+Fillup
+{% endblock %}
+
+{% block content %}
+    <h3>{{ vehicle.name }} Fillup</h3>
+    <form action="fillup">
+      <label for="fillup_date">Date</label><br>
+      <input id="fillup_date" type="datetime" /><br>
+      <label for="milage">Milage</label><br>
+      <input id="milage" type="number" /><br>
+      <label for="gal_cost">Cost per Gallon</label><br>
+      <input id="gal_cost" type="text" /><br>
+      <label for="gal">Gallons</label><br>
+      <input id="gal" type="text" /><br>
+      <label for="total">Total</label><br>
+      <input id="total" type="text" /><br>
+      <h5>Fillup Type</h5>
+      <input id="partial_fillup" type="radio" />
+      <label for="partial_fillup">Partial Fillup</label>
+      <input id="full_fillup" type="radio" />
+      <label for="full_fillup">Full Fillup</label>
+      <br>
+      <br>
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+{% endblock %}
