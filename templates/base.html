@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="/static/htmx.min.js"></script>
+    <script src="/static/tailwinds-min-3.3.3.js"></script>
+    <link rel="stylesheet" href="/static/style.css">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fillups</title>
 </head>
 <body>
     <h2>{% block title %} {% endblock %}</h2>
-    <div class="content">
+    <div class="content container mx-auto">
         {% block content %} {% endblock %}
     </div>
 </body>

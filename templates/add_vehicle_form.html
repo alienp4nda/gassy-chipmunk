@@ -1,0 +1,13 @@
+<form hx-post="/vehicle/add" hx-swap="outerHTML" hx-trigger="submit" class="shadow-md p-4 rounded-md md:col-span-3 mx-auto">
+  <label for="name">Name</label><br>
+  <input type="text" id="name" name="name" class="rounded-md border border-slate-500"><br>
+  <label for="make">Make</label><br>
+  <input type="text" id="make" name="make" class="rounded-md border border-slate-500"><br>
+  <label for="model">Model</label><br>
+  <input type="text" id="model" name="model" class="rounded-md border border-slate-500"><br>
+  <label for="year">Year</label><br>
+  <input type="number" min="2000" max="2024" id="year" name="year" class="rounded-md border border-slate-500"><br>
+  <label for="milage">Milage</label><br>
+  <input type="number" id="milage" name="milage" class="rounded-md border border-slate-500"><br><br>
+  <button type="submit" class="bg-purple-800 p-2 rounded-lg text-white">Add Vehicle</button>
+</form>

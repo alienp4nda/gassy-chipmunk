@@ -5,27 +5,19 @@ Vehicles
 {% endblock %}
 
 {% block content %}
-    <div id="vehicles">
-      {% for vehicle in vehicles %}
-      <div class="vehicle" id="vehicle-{{ vehicle.id }}">
-        {{ vehicle.year }} {{ vehicle.make }} {{ vehicle.model }}
-      </div>
-      {% endfor %}
-    </div>
-    <br>
-    <div class="add-vehicle">
-      <form action="">
-        <label for="name">Name</label><br>
-        <input type="text" id="name"><br>
-        <label for="make">Make</label><br>
-        <input type="text" id="make"><br>
-        <label for="model">Model</label><br>
-        <input type="text" id="model"><br>
-        <label for="year">Year</label><br>
-        <input type="number" min="2000" max="2024" id="year"><br>
-        <label for="milage">Milage</label><br>
-        <input type="number" id="milage"><br><br>
-        <input type="submit" value="Submit">
-      </form>
-    </div>
+<div id="vehicles" class="grid grid-cols-1 gap-1 md:gap-x-2 md:grid-cols-3 md:auto-cols-auto">
+  {% for vehicle in vehicles %}
+  {% with vehicle=vehicle %}
+  {% include "vehicle.html" %}
+  {% endwith %}
+  {% endfor %}
+  {% include "add_vehicle_item.html" %}
+</div>
+<br>
+<div id="add_vehicle_form"></div>
+<script>
+  function add_fillup(id) {
+    window.location.href = `/vehicle/${id}/fillup`
+  }
+</script>
 {% endblock %}

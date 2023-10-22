@@ -25,5 +25,11 @@ Fillup
       <br>
       <br>
       <input id="submit" type="submit" value="Submit" />
+      <input type="button" value="Cancel" onclick="go_home()">
     </form>
+    <script>
+      function go_home() {
+        window.location.href = '/'
+      }
+    </script>
 {% endblock %}

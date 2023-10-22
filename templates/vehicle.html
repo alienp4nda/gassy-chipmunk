@@ -1,0 +1,12 @@
+<div class="vehicle m-1 p-4 bg-purple-300 rounded-md flex justify-between" id="vehicle-{{ vehicle.id }}">
+  <span class="">{{ vehicle.year }} {{ vehicle.make }} {{ vehicle.model }}</span>
+  <span>Milage: {{ vehicle.milage }}</span>
+  <span class="">
+    <button class="align-middle pl-1 pr-1" onclick="add_fillup({{ vehicle.id }})"><img
+        src="/static/icons/gas-tank-drop.svg" alt="fill-up"></button>
+    {# <button class="align-middle pl-1 pr-1"><img src="/static/icons/wrench.svg" alt="fill-up"></button> #}
+  </span>
+</div>
+{% if form_submitted %}
+{% include "add_vehicle_item.html" %}
+{% endif %}
